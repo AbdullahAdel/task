@@ -1,0 +1,84 @@
+top_text=open("sample.csv","r")
+txt_arr=[]
+for x in range(1000):
+    txt_arr.append(top_text.readline())
+for y in range(1000):
+    txt_arr[y]=txt_arr[y][0:(len(txt_arr[y])-1)]
+id=[]
+for x in range(1000):
+    place=txt_arr[x].find(",")
+    id.append(txt_arr[x][:(place)])
+    txt_arr[x]=txt_arr[x][place+1:]
+commite=[]
+for x in range(1000):
+    place=txt_arr[x].find(",")
+    commite.append(txt_arr[x][:(place)])
+    txt_arr[x]=txt_arr[x][place+1:]
+graduation_year=txt_arr
+counter=0
+print("Total Applicant :\n")
+for x in range(1000):
+    if commite[x]=="IT":
+        counter+=1
+print("IT :"+str(counter))
+counter=0
+for x in range(1000):
+    if commite[x]=="PR":
+        counter+=1
+print("PR :"+str(counter))
+counter=0
+for x in range(1000):
+    if commite[x]=="HR":
+        counter+=1
+print("HR :"+str(counter))
+counter=0
+for x in range(1000):
+    if commite[x]=="FR":
+        counter+=1
+print("FR :"+str(counter))
+counter=0
+for x in range(1000):
+    if commite[x]=="L&R":
+        counter+=1
+print("L&R :"+str(counter))
+counter=0
+for x in range(1000):
+    if commite[x]=="ADV":
+        counter+=1
+print("ADV :"+str(counter))
+counter=0
+for x in range(1000):
+    if graduation_year[x]=="2017":
+        counter+=1
+print("2017 :"+str(counter))
+counter=0
+for x in range(1000):
+    if graduation_year[x]=="2018":
+        counter+=1
+print("2018 :"+str(counter))
+counter=0
+for x in range(1000):
+    if graduation_year[x]=="2019":
+        counter+=1
+print("2019 :"+str(counter))
+counter=0
+for x in range(1000):
+    if graduation_year[x]=="2020":
+        counter+=1
+print("2020 :"+str(counter))
+counter=0
+for x in range(1000):
+    if graduation_year[x]=="2021":
+        counter+=1
+print("2021 :"+str(counter))
+input_1=input("please select a preference :")
+input_2=input("please select a graduation year :")
+counter=0
+for x in range (1000):
+    if commite[x]==input_1:
+        if graduation_year[x]==input_2:
+            counter+=1
+print("Number of applicants :"+str(counter))
+
+
+
